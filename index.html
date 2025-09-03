@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kevin Roberts</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <img src="assets/profile.jpg" alt="Profile photo" class="avatar" />
+    <h1>Kevin Roberts</h1>
+    <p>Applied Mathematics • Axon Modeling • Software Engineering</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <a href="resume.pdf">Resume</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>About</h2>
+      <p>I’m a computational mathematician focused on Hodgkin–Huxley, Single Cable, and Double Cable axon models, building research-grade simulations in MATLAB & JavaFX.</p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <ul>
+        <li><strong>Axon Research App</strong> — JavaFX desktop app to simulate HH/SC/DC models and visualize APs.</li>
+        <li><strong>Cassava Disease Classifier</strong> — ML project with decision trees and notebook workflows.</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
+      <p>GitHub: <a href="https://github.com/<your-username>">@<your-username></a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/your-handle/">your-handle</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <small>© <span id="y"></span> Kevin Roberts</small>
+    <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  </footer>
+</body>
+</html>
+Click Commit.
+
+Add a stylesheet: Add file → Create new file → name it styles.css:
+
+css
+Copy code
+:root { --w: 900px; --pad: 18px; --radius: 14px; }
+* { box-sizing: border-box; }
+body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; line-height: 1.55; }
+.site-header { text-align:center; padding: 48px 16px 24px; border-bottom: 1px solid #e6e6e6; }
+.site-header .avatar { width:120px; height:120px; border-radius:50%; object-fit:cover; border: 2px solid #ddd; }
+h1 { margin: 16px 0 6px; font-size: 2rem; }
+nav a { margin: 0 10px; text-decoration:none; }
+main { max-width: var(--w); margin: 0 auto; padding: 24px var(--pad); }
+section { background: #fafafa; padding: var(--pad); border-radius: var(--radius); border: 1px solid #eee; margin-bottom: 18px; }
+.site-footer { text-align:center; color:#666; padding: 28px 0 40px; }
