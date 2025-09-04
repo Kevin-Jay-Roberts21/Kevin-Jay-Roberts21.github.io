@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kevin Roberts</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header reveal" aria-label="Site header with name and navigation">
+    <div class="header-bg" aria-hidden="true"></div>
+    <div class="header-inner">
+      <div class="left">
+        <img src="assets/profile_pic.png" alt="Profile photo of Kevin Roberts" class="avatar" />
+      </div>
+      <div class="right">
+        <h1 class="glow">Kevin Roberts</h1>
+        <p class="subtitle">Applied Mathematics • Axon Modeling • Software Engineering</p>
+
+        <nav class="nav">
+          <a href="#about" class="nav-link">About</a>
+          <a href="#projects" class="nav-link">Projects</a>
+          <a href="#contact" class="nav-link">Contact</a>
+          <a href="resume.pdf" target="_blank" rel="noopener" class="nav-link">Resume</a>
+          <button id="theme-toggle" class="toggle" aria-label="Toggle dark mode" title="Toggle theme">
+            <span class="toggle-icon">☾</span>
+          </button>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Decorative math particles -->
+    <div id="math-field" aria-hidden="true"></div>
+  </header>
+
+  <main>
+    <section id="about" class="reveal section">
+      <h2>About</h2>
+      <p>
+        I’m a computational mathematician focused on biophysical modeling of neurons (HH, SC, and DC axon models),
+        with a love for clean, documented software—from MATLAB to JavaFX—and the occasional ML sprint.
+      </p>
+    </section>
+
+    <section id="projects" class="reveal section">
+      <h2>Projects</h2>
+      <div class="grid">
+        <article class="card tilt" tabindex="0">
+          <header class="card-head">
+            <h3>Axon Research App</h3>
+            <small>JavaFX • HH / SC / DC • Packaging</small>
+          </header>
+          <p>
+            A desktop app to simulate and visualize action potentials. Supports custom meshes, parameter sweeps,
+            and polished plotting. Installers for macOS and Windows.
+          </p>
+          <a class="pill" href="https://github.com/Kevin-Jay-Roberts21/axon-research-app-downloads" target="_blank" rel="noopener">View releases</a>
+        </article>
+
+        <article class="card tilt" tabindex="0">
+          <header class="card-head">
+            <h3>Plant Image Classifier</h3>
+            <small>Python • scikit‑learn</small>
+          </header>
+          <p>
+            Baseline image classification for cassava leaf disease, with clean notebooks and reproducible pipelines.
+          </p>
+          <a class="pill" href="#" aria-disabled="true">Notebook (coming)</a>
+        </article>
+
+        <article class="card tilt" tabindex="0">
+          <header class="card-head">
+            <h3>Flow over a Spinning Cylinder</h3>
+            <small>MATLAB • Potential Flow</small>
+          </header>
+          <p>
+            Vortex, doublet, and uniform flow composition with pressure distributions and lift calculations.
+          </p>
+          <a class="pill" href="#" aria-disabled="true">Code (coming)</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="reveal section">
+      <h2>Contact</h2>
+      <ul class="contact-list">
+        <li>Email: <a href="mailto:kevinjrob9@gmail.com">kevinjrob9@gmail.com</a></li>
+        <li>GitHub: <a href="https://github.com/Kevin-Jay-Roberts21" target="_blank" rel="noopener">@Kevin-Jay-Roberts21</a></li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/kevin-roberts-6546a5252/" target="_blank" rel="noopener">kevin-roberts-6546a5252</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer reveal">
+    <small>© <span id="y"></span> Kevin Roberts</small>
+    <script>
+      document.getElementById('y').textContent = new Date().getFullYear();
+    </script>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
