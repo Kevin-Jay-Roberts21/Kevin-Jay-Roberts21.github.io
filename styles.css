@@ -113,9 +113,13 @@ main{ max-width: 1050px; margin: 0 auto; padding: 1rem 2rem 3rem; }
 .section{ margin: 2.8rem 0; }
 h2{ font-size: clamp(1.2rem, 1.2vw + .9rem, 2rem); margin: 0 0 1rem; }
 
+.status-group + .status-group{ margin-top: 1.5rem; }
+.status-group h3{ margin: 0 0 .5rem; }
+.placeholder{ margin: 0; color: var(--muted); }
+
 .grid{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
   gap: 1.2rem;
 }
 .card{
@@ -131,7 +135,7 @@ h2{ font-size: clamp(1.2rem, 1.2vw + .9rem, 2rem); margin: 0 0 1rem; }
 .card:hover{ border-color: rgba(135,206,250,.35); }
 
 .card-head{ display:flex; flex-direction:column; gap:.2rem; margin-bottom: .4rem; }
-.card-head h3{ margin: 0; font-size: 1.05rem; }
+.card-head h4{ margin: 0; font-size: 1.05rem; }
 .card-head small{ color: var(--muted); }
 
 .pill{
@@ -189,3 +193,7 @@ h2{ font-size: clamp(1.2rem, 1.2vw + .9rem, 2rem); margin: 0 0 1rem; }
 
 /* Small tweaks */
 a{ color: inherit; }
+
+@media (max-width: 550px){
+  .header-inner{ grid-template-columns: 1fr; }
+}
