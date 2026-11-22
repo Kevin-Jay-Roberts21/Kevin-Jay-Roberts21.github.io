@@ -251,9 +251,7 @@ a{ color: inherit; }
 }
 .career-photo-gallery{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
   gap: 1rem;
-  align-items: start;
 }
 
 .career-timeline{
@@ -337,8 +335,17 @@ a{ color: inherit; }
   clip-path: polygon(0 0, calc(100% - 6px) 0, 100% 50%, calc(100% - 6px) 100%, 0 100%);
 }
 
-.career-description{
-  margin-bottom: 1.5rem;
+.career-details{
+  display: grid;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+@media (min-width: 650px){
+  .career-details{
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 2rem;
+  }
 }
 .career-description h2{
   margin-bottom: .35rem;
