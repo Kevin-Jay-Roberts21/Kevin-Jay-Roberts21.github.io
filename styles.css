@@ -337,16 +337,11 @@ a{ color: inherit; }
 
 .career-details{
   display: grid;
-  gap: 1.5rem;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(.75rem, 3vw, 2rem);
   align-items: start;
 }
 
-@media (min-width: 650px){
-  .career-details{
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    gap: 2rem;
-  }
-}
 .career-description h2{
   margin-bottom: .35rem;
 }
