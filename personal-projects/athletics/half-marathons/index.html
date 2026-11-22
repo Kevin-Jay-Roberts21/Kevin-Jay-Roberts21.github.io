@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="/styles.css?v=compact-nav" />
   <style>
     .states-map { margin: 1.25rem 0 0; max-width: 840px; }
-    .states-map img { display: block; width: 100%; height: auto; }
+    .states-map object { display: block; width: 100%; height: auto; aspect-ratio: 1026 / 605; }
     .states-map figcaption { margin-top: .75rem; color: var(--muted); }
     .states-map-key {
       display: inline-block;
@@ -71,9 +71,25 @@
       <h1>Half Marathons</h1>
       <p>50 states, 50 half marathons.</p>
       <figure class="states-map">
-        <img src="/assets/half-marathon-states.svg?v=13-states" alt="Map of all 50 U.S. states. Half marathons completed in 13 states: Alaska, California, Colorado, Illinois, Indiana, Iowa, Kentucky, Minnesota, Missouri, North Carolina, Ohio, Utah, Wisconsin." />
-        <figcaption><span class="states-map-key" aria-hidden="true"></span> Green states mark where I’ve run a half marathon.</figcaption>
+        <object data="/assets/half-marathon-states.svg?v=run-links" type="image/svg+xml" width="1026" height="605" aria-label="U.S. map with links to 13 completed half marathon states"></object>
+        <figcaption><span class="states-map-key" aria-hidden="true"></span> Select a green state to see run details.</figcaption>
       </figure>
+      <h2>Completed states</h2>
+      <ul class="page-links">
+        <li><a href="/personal-projects/athletics/half-marathons/alaska/">Alaska</a></li>
+        <li><a href="/personal-projects/athletics/half-marathons/california/">California</a></li>
+        <li><a href="/personal-projects/athletics/half-marathons/colorado/">Colorado</a></li>
+        <li><a href="/personal-projects/athletics/half-marathons/illinois/">Illinois</a></li>
+        <li><a href="/personal-projects/athletics/half-marathons/indiana/">Indiana</a></li>
+        <li><a href="/personal-projects/athletics/half-marathons/iowa/">Iowa</a></li>
+        <li><a href="/personal-projects/athletics/half-marathons/kentucky/">Kentucky</a></li>
+        <li><a href="/personal-projects/athletics/half-marathons/minnesota/">Minnesota</a></li>
+        <li><a href="/personal-projects/athletics/half-marathons/missouri/">Missouri</a></li>
+        <li><a href="/personal-projects/athletics/half-marathons/north-carolina/">North Carolina</a></li>
+        <li><a href="/personal-projects/athletics/half-marathons/ohio/">Ohio</a></li>
+        <li><a href="/personal-projects/athletics/half-marathons/utah/">Utah</a></li>
+        <li><a href="/personal-projects/athletics/half-marathons/wisconsin/">Wisconsin</a></li>
+      </ul>
     </div>
   </main>
 
