@@ -19,26 +19,9 @@ const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').match
   });
 })();
 
-// Scroll reveal using IntersectionObserver
-(function revealOnScroll(){
-  const els = document.querySelectorAll('.reveal');
-  if(reduceMotion || !('IntersectionObserver' in window)){
-    els.forEach(el => el.classList.add('in'));
-    return;
-  }
-  const io = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if(e.isIntersecting){
-        e.target.classList.add('in');
-        io.unobserve(e.target);
-      }
-    });
-  }, { threshold: .15 });
-  els.forEach(el => io.observe(el));
-})();
-
 // Subtle tilt on cards based on pointer
 (function tiltCards(){
+  if (reduceMotion) return;
   const cards = document.querySelectorAll('.tilt');
   const strength = 6;
   cards.forEach(card => {
@@ -89,20 +72,9 @@ const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').match
   field.appendChild(frag);
 })();
 
-// Smooth scroll focus management for accessibility
-(function smoothFocus(){
-  const links = document.querySelectorAll('a[href^="#"]');
-  links.forEach(link => {
-    link.addEventListener('click', e => {
-      const id = link.getAttribute('href').slice(1);
-      const target = document.getElementById(id);
-      if(target){
-        e.preventDefault();
-        target.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
-        target.setAttribute('tabindex', '-1');
-        target.focus({ preventScroll: true });
-        setTimeout(() => target.removeAttribute('tabindex'), 500);
-      }
-    });
-  });
-})();
+// Keep previously shared section links working.
+if (window.location.pathname === '/') {
+  const section = window.location.hash.slice(1);
+  const sections = ['about', 'projects', 'personal-projects', 'career', 'contact'];
+  if (sections.includes(section)) window.location.replace(`/${section}/`);
+}
