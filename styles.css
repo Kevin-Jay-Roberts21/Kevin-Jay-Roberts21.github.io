@@ -332,8 +332,8 @@ a{ color: inherit; }
   border-radius: .2rem;
   background: var(--brand);
 }
-.career-bar.is-seasonal{
-  background: repeating-linear-gradient(135deg, var(--brand-2) 0 4px, var(--bg-soft) 4px 6px);
+.career-bar.is-part-time{
+  background: repeating-linear-gradient(135deg, var(--brand) 0 4px, var(--bg-soft) 4px 6px);
 }
 .career-bar.is-ongoing{
   clip-path: polygon(0 0, calc(100% - 6px) 0, 100% 50%, calc(100% - 6px) 100%, 0 100%);
