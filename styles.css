@@ -236,12 +236,6 @@ a{ color: inherit; }
   .tilt:hover{ transform: none; }
 }
 
-.career-list li{
-  display: flex;
-}
-.career-list a{
-  width: 100%;
-}
 .career-employer{
   display: block;
   margin: 0;
@@ -277,4 +271,79 @@ a{ color: inherit; }
 .career-timeline dd{
   margin: .15rem 0 0;
   font-weight: 600;
+}
+
+.career-chart-key{
+  color: var(--muted);
+  margin: .5rem 0 1rem;
+}
+.career-chart-scroll{
+  overflow-x: auto;
+  border: 1px solid var(--ring);
+  border-radius: 12px;
+}
+.career-chart-scroll:focus-visible{
+  outline: 2px solid var(--brand);
+  outline-offset: 3px;
+}
+.career-chart-row{
+  display: grid;
+  grid-template-columns: clamp(10rem, 27vw, 17rem) minmax(0, 1fr);
+  min-width: 48rem;
+  border-bottom: 1px solid var(--ring);
+}
+.career-chart-list{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.career-chart-list li:last-child{ border-bottom: 0; }
+.career-chart-header{
+  background: var(--bg-soft);
+  font-size: .875rem;
+  font-weight: 700;
+}
+.career-chart-label{
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  padding: .6rem .75rem;
+  background: var(--bg-soft);
+  border-right: 1px solid var(--ring);
+}
+.career-chart-label a{
+  font-weight: 650;
+  text-underline-offset: .15em;
+}
+.career-chart-label .career-employer,
+.career-chart-dates{
+  font-size: .875rem;
+}
+.career-chart-dates{
+  display: block;
+  color: var(--muted);
+}
+.career-chart-years{
+  display: grid;
+  grid-template-columns: repeat(11, minmax(0, 1fr));
+  align-items: center;
+  text-align: center;
+}
+.career-track{
+  display: grid;
+  grid-template-columns: repeat(132, minmax(0, 1fr));
+  align-items: center;
+  background-image: linear-gradient(to right, transparent calc(100% - 1px), var(--ring) calc(100% - 1px));
+  background-size: calc(100% / 11) 100%;
+}
+.career-bar{
+  height: .85rem;
+  border-radius: .2rem;
+  background: var(--brand);
+}
+.career-bar.is-seasonal{
+  background: repeating-linear-gradient(135deg, var(--brand-2) 0 4px, var(--bg-soft) 4px 6px);
+}
+.career-bar.is-ongoing{
+  clip-path: polygon(0 0, calc(100% - 6px) 0, 100% 50%, calc(100% - 6px) 100%, 0 100%);
 }
