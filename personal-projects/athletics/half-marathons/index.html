@@ -5,6 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Half Marathons | Athletics | Personal Projects | Kevin Roberts</title>
   <link rel="stylesheet" href="/styles.css?v=compact-nav" />
+  <style>
+    .states-map { margin: 1.25rem 0 0; max-width: 840px; }
+    .states-map img { display: block; width: 100%; height: auto; }
+    .states-map figcaption { margin-top: .75rem; color: var(--muted); }
+    .states-map-key {
+      display: inline-block;
+      width: .8em;
+      height: .8em;
+      margin-right: .35em;
+      border-radius: .15em;
+      background: #25834d;
+    }
+  </style>
 </head>
 <body>
   <header class="site-header" aria-label="Site header with name and navigation">
@@ -56,7 +69,11 @@
         <a href="/personal-projects/athletics/other/" class="subnav-link">Other</a>
       </nav>
       <h1>Half Marathons</h1>
-      <p class="placeholder">Projects coming soon.</p>
+      <p>50 states, 50 half marathons.</p>
+      <figure class="states-map">
+        <img src="/assets/half-marathon-states.svg" alt="Map of all 50 U.S. states. No states are marked yet." />
+        <figcaption><span class="states-map-key" aria-hidden="true"></span> Green states mark where I’ve run a half marathon.</figcaption>
+      </figure>
     </div>
   </main>
 
