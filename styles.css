@@ -315,14 +315,6 @@ a{ color: inherit; }
   font-weight: 650;
   text-underline-offset: .15em;
 }
-.career-chart-label .career-employer,
-.career-chart-dates{
-  font-size: .875rem;
-}
-.career-chart-dates{
-  display: block;
-  color: var(--muted);
-}
 .career-chart-years{
   display: grid;
   grid-template-columns: repeat(11, minmax(0, 1fr));
