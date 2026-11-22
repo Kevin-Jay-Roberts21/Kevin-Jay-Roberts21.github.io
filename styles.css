@@ -249,13 +249,11 @@ a{ color: inherit; }
   height: auto;
   border-radius: 12px;
 }
-.career-photo-placeholder{
+.career-photo-gallery{
   display: grid;
-  place-items: center;
-  aspect-ratio: 16 / 9;
-  border: 1px dashed var(--ring);
-  background: var(--card);
-  color: var(--muted);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
+  gap: 1rem;
+  align-items: start;
 }
 
 .career-timeline{
