@@ -235,3 +235,31 @@ a{ color: inherit; }
   .header-bg{ animation: none; }
   .tilt:hover{ transform: none; }
 }
+
+.career-list li{
+  display: flex;
+}
+.career-list a{
+  width: 100%;
+}
+.career-employer{
+  display: block;
+  margin: 0;
+  color: var(--muted);
+  font-weight: 400;
+}
+.career-photo{
+  display: block;
+  width: 100%;
+  max-width: 680px;
+  height: auto;
+  border-radius: 12px;
+}
+.career-photo-placeholder{
+  display: grid;
+  place-items: center;
+  aspect-ratio: 16 / 9;
+  border: 1px dashed var(--ring);
+  background: var(--card);
+  color: var(--muted);
+}
