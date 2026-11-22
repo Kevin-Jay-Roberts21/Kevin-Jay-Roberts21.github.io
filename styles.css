@@ -307,7 +307,7 @@ a{ color: inherit; }
   position: sticky;
   left: 0;
   z-index: 1;
-  padding: .6rem .75rem;
+  padding: .3rem .75rem;
   background: var(--bg-soft);
   border-right: 1px solid var(--ring);
 }
@@ -324,12 +324,11 @@ a{ color: inherit; }
 .career-track{
   display: grid;
   grid-template-columns: repeat(132, minmax(0, 1fr));
-  align-items: center;
   background-image: linear-gradient(to right, transparent calc(100% - 1px), var(--ring) calc(100% - 1px));
   background-size: calc(100% / 11) 100%;
 }
 .career-bar{
-  height: .85rem;
+  margin-block: 1px;
   border-radius: .2rem;
   background: var(--brand);
 }
