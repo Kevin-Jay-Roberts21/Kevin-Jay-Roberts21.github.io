@@ -263,3 +263,18 @@ a{ color: inherit; }
   background: var(--card);
   color: var(--muted);
 }
+
+.career-timeline{
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem 2.5rem;
+  margin: 0 0 1.5rem;
+}
+.career-timeline dt{
+  color: var(--muted);
+  font-size: .875rem;
+}
+.career-timeline dd{
+  margin: .15rem 0 0;
+  font-weight: 600;
+}
