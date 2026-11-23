@@ -369,9 +369,25 @@ a{ color: inherit; }
 
 .race-details-layout{
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: clamp(.75rem, 3vw, 2rem);
   align-items: start;
+}
+@media (min-width: 700px){
+  .race-details-layout{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+.race-video-placeholder{
+  display: grid;
+  place-items: center;
+  aspect-ratio: 16 / 9;
+  margin: 0;
+  padding: .75rem;
+  border: 1px dashed var(--ring);
+  border-radius: 12px;
+  color: var(--muted);
+  background: var(--card);
+  text-align: center;
 }
 .race-details-layout dl{
   margin-top: 0;
