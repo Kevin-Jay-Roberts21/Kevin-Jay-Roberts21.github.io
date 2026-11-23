@@ -419,9 +419,66 @@ a{ color: inherit; }
   display: block;
   width: 100%;
   max-width: 220px;
+  aspect-ratio: 1;
   height: auto;
   margin-bottom: 1rem;
 }
 .race-details-layout dd + dt{
   margin-top: .65rem;
+}
+
+.race-timeline {
+  max-width: 840px;
+  margin-top: 1.25rem;
+  padding: .9rem 1rem;
+  background: var(--bg-soft);
+  border: 1px solid var(--ring);
+  border-radius: .75rem;
+}
+.race-timeline h2 { margin: 0; }
+.race-timeline-label {
+  min-height: 2.8em;
+  margin: .25rem 0 .5rem;
+  color: var(--muted);
+}
+.race-track {
+  position: relative;
+  height: 3.15rem;
+  margin-inline: .25rem;
+}
+.race-track::before {
+  content: "";
+  position: absolute;
+  inset: 1.04rem 0 auto;
+  border-top: 1px solid var(--muted);
+}
+.race-year, .race-marker { position: absolute; left: var(--position); }
+.race-year { bottom: 0; font-size: .875rem; color: var(--muted); }
+.race-marker {
+  top: .2rem;
+  transform: translateX(-50%);
+  display: grid;
+  place-items: center;
+  width: 1.05%;
+  height: 1.7rem;
+  border-radius: .3rem;
+}
+.race-marker:hover, .race-marker:focus-visible { z-index: 1; }
+.race-marker span { display: none; }
+.race-marker::before {
+  content: "";
+  width: min(.3rem, 70%);
+  height: .95rem;
+  border-radius: .2rem;
+  background: #25834d;
+}
+.race-marker:hover, .race-marker:focus-visible {
+  outline: 2px solid var(--brand);
+  background: var(--card);
+}
+
+.race-marker[aria-current="page"]::before {
+  background: #facc15;
+  height: 1.4rem;
+  outline: 1px solid #29303a;
 }

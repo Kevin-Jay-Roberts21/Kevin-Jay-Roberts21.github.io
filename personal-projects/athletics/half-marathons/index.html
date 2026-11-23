@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Half Marathons | Athletics | Personal Projects | Kevin Roberts</title>
-  <link rel="stylesheet" href="/styles.css?v=compact-nav" />
+  <link rel="stylesheet" href="/styles.css?v=race-page-timeline" />
   <style>
     .states-map { margin: 1.25rem 0 0; max-width: 840px; }
     .states-map object { display: block; width: 100%; height: auto; aspect-ratio: 1026 / 605; }
@@ -18,55 +18,6 @@
       background: #25834d;
     }
 
-    .race-timeline {
-      max-width: 840px;
-      margin-top: 1.25rem;
-      padding: .9rem 1rem;
-      background: var(--bg-soft);
-      border: 1px solid var(--ring);
-      border-radius: .75rem;
-    }
-    .race-timeline h2 { margin: 0; }
-    .race-timeline-label {
-      min-height: 2.8em;
-      margin: .25rem 0 .5rem;
-      color: var(--muted);
-    }
-    .race-track {
-      position: relative;
-      height: 3.15rem;
-      margin-inline: .25rem;
-    }
-    .race-track::before {
-      content: "";
-      position: absolute;
-      inset: 1.04rem 0 auto;
-      border-top: 1px solid var(--muted);
-    }
-    .race-year, .race-marker { position: absolute; left: var(--position); }
-    .race-year { bottom: 0; font-size: .875rem; color: var(--muted); }
-    .race-marker {
-      top: .2rem;
-      transform: translateX(-50%);
-      display: grid;
-      place-items: center;
-      width: 1.05%;
-      height: 1.7rem;
-      border-radius: .3rem;
-    }
-    .race-marker:hover, .race-marker:focus-visible { z-index: 1; }
-    .race-marker span { display: none; }
-    .race-marker::before {
-      content: "";
-      width: min(.3rem, 70%);
-      height: .95rem;
-      border-radius: .2rem;
-      background: #25834d;
-    }
-    .race-marker:hover, .race-marker:focus-visible {
-      outline: 2px solid var(--brand);
-      background: var(--card);
-    }
   </style>
 </head>
 <body>
@@ -156,44 +107,6 @@
   </footer>
 
   <script src="/script.js"></script>
-  <script>
-    const timeline = document.querySelector('.race-timeline');
-    const label = timeline.querySelector('.race-timeline-label');
-    const hint = label.textContent;
-    const map = document.querySelector('.states-map object');
-    let hoveredMarker = null;
-    let focusedMarker = null;
-    let highlightedState = null;
-
-    function updateRaceHighlight() {
-      const marker = hoveredMarker || focusedMarker;
-      label.textContent = marker ? marker.querySelector('span').textContent : hint;
-      highlightedState?.classList.remove('timeline-highlight');
-      highlightedState = marker
-        ? map.contentDocument?.getElementById(marker.dataset.state)
-        : null;
-      highlightedState?.classList.add('timeline-highlight');
-    }
-
-    map.addEventListener('load', updateRaceHighlight);
-    for (const marker of timeline.querySelectorAll('.race-marker')) {
-      marker.addEventListener('pointerenter', () => {
-        hoveredMarker = marker;
-        updateRaceHighlight();
-      });
-      marker.addEventListener('pointerleave', () => {
-        hoveredMarker = null;
-        updateRaceHighlight();
-      });
-      marker.addEventListener('focus', () => {
-        focusedMarker = marker;
-        updateRaceHighlight();
-      });
-      marker.addEventListener('blur', () => {
-        focusedMarker = null;
-        updateRaceHighlight();
-      });
-    }
-  </script>
+  <script src="/assets/half-marathon-timeline.js"></script>
 </body>
 </html>
