@@ -398,16 +398,16 @@ a{ color: inherit; }
   max-width: 260px;
 }
 
-.subnav.race-navigation{
+.subnav.race-navigation, .subnav.job-navigation{
   flex-wrap: nowrap;
   align-items: flex-start;
 }
-.race-adjacent-links{
+.race-adjacent-links, .job-adjacent-links{
   display: flex;
   flex-wrap: wrap;
   gap: .3rem;
 }
-.subnav .race-map-link{
+.subnav .race-map-link, .subnav .job-overview-link{
   flex-shrink: 0;
   margin-inline-start: auto;
   border-color: var(--ring);
