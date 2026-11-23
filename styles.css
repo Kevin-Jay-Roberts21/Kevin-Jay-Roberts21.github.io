@@ -382,3 +382,9 @@ a{ color: inherit; }
 .race-details-layout .race-photo-keepsake{
   max-width: 140px;
 }
+
+.subnav .race-map-link{
+  margin-inline-start: auto;
+  border-color: var(--ring);
+  background: var(--card);
+}
