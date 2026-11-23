@@ -394,8 +394,8 @@ a{ color: inherit; }
   border-radius: 12px;
 }
 .race-details-layout .race-photo-keepsake{
-  width: 45%;
-  max-width: 175px;
+  width: 55%;
+  max-width: 195px;
 }
 
 .subnav.race-navigation{
@@ -480,4 +480,16 @@ a{ color: inherit; }
   background: #facc15;
   height: 1.4rem;
   outline: 1px solid #29303a;
+}
+
+
+/* The four screenshots share a 740 × 1600 source frame. */
+.race-snapshot{
+  aspect-ratio: 740 / 1155;
+  overflow: hidden;
+  border-radius: 12px;
+}
+.race-snapshot .race-photo{
+  transform: translateY(-18.875%);
+  border-radius: 0;
 }
