@@ -383,7 +383,17 @@ a{ color: inherit; }
   max-width: 140px;
 }
 
+.subnav.race-navigation{
+  flex-wrap: nowrap;
+  align-items: flex-start;
+}
+.race-adjacent-links{
+  display: flex;
+  flex-wrap: wrap;
+  gap: .3rem;
+}
 .subnav .race-map-link{
+  flex-shrink: 0;
   margin-inline-start: auto;
   border-color: var(--ring);
   background: var(--card);
