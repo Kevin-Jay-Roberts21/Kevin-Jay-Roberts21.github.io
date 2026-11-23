@@ -370,7 +370,6 @@ a{ color: inherit; }
 .race-details-layout{
   display: grid;
   gap: clamp(.75rem, 3vw, 2rem);
-  align-items: start;
 }
 @media (min-width: 700px){
   .race-details-layout{
@@ -389,14 +388,14 @@ a{ color: inherit; }
   background: var(--card);
   text-align: center;
 }
-.race-details-layout dl{
-  margin-top: 0;
-}
-.race-details-layout dd{
-  margin-left: 0;
+.race-details-layout > section{
+  padding: .85rem;
+  border: 1px solid var(--ring);
+  border-radius: 12px;
 }
 .race-details-layout .race-photo-keepsake{
-  max-width: 140px;
+  width: 45%;
+  max-width: 175px;
 }
 
 .subnav.race-navigation{
@@ -418,13 +417,13 @@ a{ color: inherit; }
 .race-state-map{
   display: block;
   width: 100%;
-  max-width: 220px;
-  aspect-ratio: 1;
-  height: auto;
-  margin-bottom: 1rem;
+  max-width: 240px;
+  height: 165px;
+  object-fit: contain;
+  object-position: left center;
 }
-.race-details-layout dd + dt{
-  margin-top: .65rem;
+.race-location{
+  margin: .45rem 0 1rem;
 }
 
 .race-timeline {
