@@ -4,6 +4,11 @@
   <style>
     path { fill: #b7c4d0; stroke: #f8fafc; stroke-width: 1; }
     .completed { fill: #25834d; cursor: pointer; }
+    .completed.timeline-highlight {
+      fill: #14532d;
+      stroke: #facc15;
+      stroke-width: 3;
+    }
     a:hover .completed, a:focus .completed {
       fill: #176435;
       stroke: #172b3d;
