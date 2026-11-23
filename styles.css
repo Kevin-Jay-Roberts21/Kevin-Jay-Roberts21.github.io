@@ -355,7 +355,7 @@ a{ color: inherit; }
 .race-photo-gallery{
   display: grid;
   gap: 1rem;
-  max-width: 560px;
+  max-width: min(90%, 440px);
 }
 .race-photo{
   display: block;
