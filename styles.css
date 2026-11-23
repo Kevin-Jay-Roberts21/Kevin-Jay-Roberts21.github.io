@@ -366,3 +366,19 @@ a{ color: inherit; }
 .race-photo-keepsake{
   width: 25%;
 }
+
+.race-details-layout{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(.75rem, 3vw, 2rem);
+  align-items: start;
+}
+.race-details-layout dl{
+  margin-top: 0;
+}
+.race-details-layout dd{
+  margin-left: 0;
+}
+.race-details-layout .race-photo-keepsake{
+  max-width: 140px;
+}
