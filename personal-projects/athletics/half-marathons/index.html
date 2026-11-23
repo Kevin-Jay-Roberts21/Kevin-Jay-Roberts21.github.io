@@ -50,7 +50,7 @@
       transform: translateX(-50%);
       display: grid;
       place-items: center;
-      width: 1.5rem;
+      width: min(1.5rem, 4.5%);
       height: 1.7rem;
       border-radius: .3rem;
     }
@@ -122,7 +122,7 @@
       <section class="race-timeline" aria-labelledby="race-timeline-title">
         <h2 id="race-timeline-title">Race timeline</h2>
         <p class="race-timeline-label" aria-hidden="true">Hover over or focus a marker to see the state and date.</p>
-        <div class="race-track" style="--lanes: 8">
+        <div class="race-track" style="--lanes: 6">
           <span class="race-year" style="--position: 0.000%">2022</span>
           <span class="race-year" style="--position: 19.989%">2023</span>
           <span class="race-year" style="--position: 39.978%">2024</span>
@@ -132,13 +132,13 @@
           <a class="race-marker" href="/personal-projects/athletics/half-marathons/alaska/" style="--position: 70.920%; --lane: 0" data-state="alaska" aria-label="Alaska, July 19, 2025"><span>Alaska · <time datetime="2025-07-19">July 19, 2025</time></span></a>
           <a class="race-marker" href="/personal-projects/athletics/half-marathons/colorado/" style="--position: 83.571%; --lane: 0" data-state="colorado" aria-label="Colorado, March 7, 2026"><span>Colorado · <time datetime="2026-03-07">March 7, 2026</time></span></a>
           <a class="race-marker" href="/personal-projects/athletics/half-marathons/wisconsin/" style="--position: 87.842%; --lane: 1" data-state="wisconsin" aria-label="Wisconsin, May 24, 2026"><span>Wisconsin · <time datetime="2026-05-24">May 24, 2026</time></span></a>
-          <a class="race-marker" href="/personal-projects/athletics/half-marathons/iowa/" style="--position: 88.609%; --lane: 2" data-state="iowa" aria-label="Iowa, June 7, 2026"><span>Iowa · <time datetime="2026-06-07">June 7, 2026</time></span></a>
-          <a class="race-marker" href="/personal-projects/athletics/half-marathons/illinois/" style="--position: 89.704%; --lane: 3" data-state="illinois" aria-label="Illinois, June 27, 2026"><span>Illinois · <time datetime="2026-06-27">June 27, 2026</time></span></a>
-          <a class="race-marker" href="/personal-projects/athletics/half-marathons/minnesota/" style="--position: 90.416%; --lane: 4" data-state="minnesota" aria-label="Minnesota, July 10, 2026"><span>Minnesota · <time datetime="2026-07-10">July 10, 2026</time></span></a>
-          <a class="race-marker" href="/personal-projects/athletics/half-marathons/california/" style="--position: 91.183%; --lane: 5" data-state="california" aria-label="California, July 24, 2026"><span>California · <time datetime="2026-07-24">July 24, 2026</time></span></a>
-          <a class="race-marker" href="/personal-projects/athletics/half-marathons/missouri/" style="--position: 92.004%; --lane: 0" data-state="missouri" aria-label="Missouri, August 8, 2026"><span>Missouri · <time datetime="2026-08-08">August 8, 2026</time></span></a>
-          <a class="race-marker" href="/personal-projects/athletics/half-marathons/indiana/" style="--position: 92.771%; --lane: 6" data-state="indiana" aria-label="Indiana, August 22, 2026"><span>Indiana · <time datetime="2026-08-22">August 22, 2026</time></span></a>
-          <a class="race-marker" href="/personal-projects/athletics/half-marathons/north-carolina/" style="--position: 95.509%; --lane: 7" data-state="north-carolina" aria-label="North Carolina, October 11, 2026"><span>North Carolina · <time datetime="2026-10-11">October 11, 2026</time></span></a>
+          <a class="race-marker" href="/personal-projects/athletics/half-marathons/iowa/" style="--position: 88.609%; --lane: 0" data-state="iowa" aria-label="Iowa, June 7, 2026"><span>Iowa · <time datetime="2026-06-07">June 7, 2026</time></span></a>
+          <a class="race-marker" href="/personal-projects/athletics/half-marathons/illinois/" style="--position: 89.704%; --lane: 2" data-state="illinois" aria-label="Illinois, June 27, 2026"><span>Illinois · <time datetime="2026-06-27">June 27, 2026</time></span></a>
+          <a class="race-marker" href="/personal-projects/athletics/half-marathons/minnesota/" style="--position: 90.416%; --lane: 3" data-state="minnesota" aria-label="Minnesota, July 10, 2026"><span>Minnesota · <time datetime="2026-07-10">July 10, 2026</time></span></a>
+          <a class="race-marker" href="/personal-projects/athletics/half-marathons/california/" style="--position: 91.183%; --lane: 4" data-state="california" aria-label="California, July 24, 2026"><span>California · <time datetime="2026-07-24">July 24, 2026</time></span></a>
+          <a class="race-marker" href="/personal-projects/athletics/half-marathons/missouri/" style="--position: 92.004%; --lane: 5" data-state="missouri" aria-label="Missouri, August 8, 2026"><span>Missouri · <time datetime="2026-08-08">August 8, 2026</time></span></a>
+          <a class="race-marker" href="/personal-projects/athletics/half-marathons/indiana/" style="--position: 92.771%; --lane: 1" data-state="indiana" aria-label="Indiana, August 22, 2026"><span>Indiana · <time datetime="2026-08-22">August 22, 2026</time></span></a>
+          <a class="race-marker" href="/personal-projects/athletics/half-marathons/north-carolina/" style="--position: 95.509%; --lane: 0" data-state="north-carolina" aria-label="North Carolina, October 11, 2026"><span>North Carolina · <time datetime="2026-10-11">October 11, 2026</time></span></a>
           <a class="race-marker" href="/personal-projects/athletics/half-marathons/ohio/" style="--position: 97.371%; --lane: 1" data-state="ohio" aria-label="Ohio, November 14, 2026"><span>Ohio · <time datetime="2026-11-14">November 14, 2026</time></span></a>
           <a class="race-marker" href="/personal-projects/athletics/half-marathons/kentucky/" style="--position: 97.426%; --lane: 2" data-state="kentucky" aria-label="Kentucky, November 15, 2026"><span>Kentucky · <time datetime="2026-11-15">November 15, 2026</time></span></a>
         </div>
