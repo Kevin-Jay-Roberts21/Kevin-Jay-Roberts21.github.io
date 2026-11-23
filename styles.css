@@ -398,3 +398,14 @@ a{ color: inherit; }
   border-color: var(--ring);
   background: var(--card);
 }
+
+.race-state-map{
+  display: block;
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+.race-details-layout dd + dt{
+  margin-top: .65rem;
+}
