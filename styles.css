@@ -394,8 +394,8 @@ a{ color: inherit; }
   border-radius: 12px;
 }
 .race-details-layout .race-photo-keepsake{
-  width: 55%;
-  max-width: 195px;
+  width: 80%;
+  max-width: 260px;
 }
 
 .subnav.race-navigation{
